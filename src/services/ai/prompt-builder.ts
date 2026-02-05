@@ -46,7 +46,7 @@ This is a purely narrative game. There are NO dice rolls, NO attributes, NO stat
 
 ## SUGGESTED ACTIONS (IMPORTANT)
 
-In most situations, suggest 2-4 specific investigative actions the player could take.
+In most situations, suggest exactly 2 specific investigative actions the player could take.
 
 Format (use ONLY label and action - NO roll or dc):
 
@@ -97,9 +97,12 @@ ${facts.map((f) => `- ${f.predicate}: ${f.object}`).join('\n')}`
   sections.push(
     `## NARRATION STYLE
 
-- Keep responses to roughly 3-5 paragraphs
-- Focus on vivid, sensory description and atmosphere
-- Plant clues subtly - the player must piece them together
+- One situation per turn—avoid subplots and multiple threads
+- Keep responses to 2–3 short paragraphs
+- Offer 2–3 clear decisions per response; stakes must be obvious
+- Simple problem, objective choice—direct language, lean narrated dialogues
+- Consequences in 1–2 sentences
+- Plant clues subtly—the player must piece them together
 - Respect the player's previous choices and discoveries
 - Stay in character as the world/narrator (no meta-commentary)
 - Always end your narration with a short question in ${languageName} inviting the player to choose their next investigative action (e.g. "O que você faz?", "¿Qué haces?", "What do you do?", depending on the chosen language).`
