@@ -5,6 +5,7 @@ import { getLanguage, getLanguageName } from '../../services/storage/settings-st
 import * as messageRepo from '../../services/storage/message-repo';
 import { useChatStore } from '../../store/chat-store';
 import { t } from '../../services/i18n/use-i18n';
+import { Combobox } from '../common/Combobox';
 import type { Entity } from '../../types/models';
 
 interface ArrestPanelProps {
@@ -214,90 +215,33 @@ export function ArrestPanel({ campaignId, entities, maxAttempts, onCaseSolved, o
           {t('arrest.selectHint')}
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '14px' }}>
-          <div>
-            <label style={{ fontSize: '10px', color: 'var(--color-text-secondary)', display: 'block', marginBottom: '4px' }}>
-              {t('arrest.suspect')}
-            </label>
-            <input
-              type="text"
-              list="arrest-suspects"
-              value={suspect}
-              onChange={(e) => setSuspect(e.target.value)}
-              placeholder={suspectOptions.length ? undefined : t('arrest.suspectPlaceholder')}
-              disabled={isVerifying || isTestingHypothesis}
-              className="form-input"
-              style={{
-                width: '100%',
-                padding: '6px 8px',
-                fontSize: '13px',
-                backgroundColor: 'var(--color-bg-primary)',
-                border: '2px solid var(--color-border)',
-                color: 'var(--color-text-primary)',
-                fontFamily: 'inherit',
-              }}
-            />
-            <datalist id="arrest-suspects">
-              {suspectOptions.map((name) => (
-                <option key={name} value={name} />
-              ))}
-            </datalist>
-          </div>
-          <div>
-            <label style={{ fontSize: '10px', color: 'var(--color-text-secondary)', display: 'block', marginBottom: '4px' }}>
-              {t('arrest.weapon')}
-            </label>
-            <input
-              type="text"
-              list="arrest-weapons"
-              value={weapon}
-              onChange={(e) => setWeapon(e.target.value)}
-              placeholder={weaponOptions.length ? undefined : t('arrest.weaponPlaceholder')}
-              disabled={isVerifying || isTestingHypothesis}
-              className="form-input"
-              style={{
-                width: '100%',
-                padding: '6px 8px',
-                fontSize: '13px',
-                backgroundColor: 'var(--color-bg-primary)',
-                border: '2px solid var(--color-border)',
-                color: 'var(--color-text-primary)',
-                fontFamily: 'inherit',
-              }}
-            />
-            <datalist id="arrest-weapons">
-              {weaponOptions.map((name) => (
-                <option key={name} value={name} />
-              ))}
-            </datalist>
-          </div>
-          <div>
-            <label style={{ fontSize: '10px', color: 'var(--color-text-secondary)', display: 'block', marginBottom: '4px' }}>
-              {t('arrest.motive')}
-            </label>
-            <input
-              type="text"
-              list="arrest-motives"
-              value={motive}
-              onChange={(e) => setMotive(e.target.value)}
-              placeholder={t('arrest.motivePlaceholder')}
-              disabled={isVerifying || isTestingHypothesis}
-              className="form-input"
-              style={{
-                width: '100%',
-                padding: '6px 8px',
-                fontSize: '13px',
-                backgroundColor: 'var(--color-bg-primary)',
-                border: '2px solid var(--color-border)',
-                color: 'var(--color-text-primary)',
-                fontFamily: 'inherit',
-              }}
-            />
-            <datalist id="arrest-motives">
-              {motiveOptions.map((m) => (
-                <option key={m} value={m} />
-              ))}
-            </datalist>
-          </div>
+          <Combobox
+            label={t('arrest.suspect')}
+            value={suspect}
+            onChange={setSuspect}
+            options={suspectOptions}
+            placeholder={t('arrest.suspectPlaceholder')}
+            disabled={isVerifying || isTestingHypothesis}
+            id="arrest-suspect"
+          />
+          <Combobox
+            label={t('arrest.weapon')}
+            value={weapon}
+            onChange={setWeapon}
+            options={weaponOptions}
+            placeholder={t('arrest.weaponPlaceholder')}
+            disabled={isVerifying || isTestingHypothesis}
+            id="arrest-weapon"
+          />
+          <Combobox
+            label={t('arrest.motive')}
+            value={motive}
+            onChange={setMotive}
+            options={motiveOptions}
+            placeholder={t('arrest.motivePlaceholder')}
+            disabled={isVerifying || isTestingHypothesis}
+            id="arrest-motive"
+          />
         </div>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
           <button
