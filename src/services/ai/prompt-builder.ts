@@ -98,14 +98,14 @@ ${facts.map((f) => `- ${f.predicate}: ${f.object}`).join('\n')}`
     `## NARRATION STYLE
 
 - One situation per turn—avoid subplots and multiple threads
-- Keep responses to 2–3 short paragraphs
-- Offer 2–3 clear decisions per response; stakes must be obvious
+- BREVITY IS ESSENTIAL: 1–2 short paragraphs max (3–5 sentences total). No long descriptions.
+- Offer 2 clear decisions per response; stakes must be obvious
 - Simple problem, objective choice—direct language, lean narrated dialogues
-- Consequences in 1–2 sentences
+- Consequences in 1 sentence
 - Plant clues subtly—the player must piece them together
 - Respect the player's previous choices and discoveries
 - Stay in character as the world/narrator (no meta-commentary)
-- Always end your narration with a short question in ${languageName} inviting the player to choose their next investigative action (e.g. "O que você faz?", "¿Qué haces?", "What do you do?", depending on the chosen language).`
+- Always end with a short question in ${languageName} inviting the next action (e.g. "O que você faz?", "¿Qué haces?", "What do you do?").`
   );
 
   return sections.join('\n\n---\n\n');

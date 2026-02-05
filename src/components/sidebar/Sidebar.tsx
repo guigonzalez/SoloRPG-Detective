@@ -113,6 +113,7 @@ export function Sidebar({
         {activePanel === 'arrest' && (
           <ArrestPanel
             campaignId={campaignId}
+            entities={entities}
             maxAttempts={maxArrestAttempts}
             onCaseSolved={onCaseSolved}
             onCaseFailed={onCaseFailed}

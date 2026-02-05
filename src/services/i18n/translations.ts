@@ -196,10 +196,14 @@ export interface Translations {
   // Arrest Panel (Voz de Prisão)
   arrest: {
     title: string;
+    testHypothesis: string;
     voiceOfArrest: string;
     attemptsRemaining: string;
     noMysteryYet: string;
     accusation: string;
+    hypothesisHint: string;
+    selectHint: string;
+    commonMotives: string;
     suspect: string;
     suspectPlaceholder: string;
     weapon: string;
@@ -581,10 +585,14 @@ export const translations: Record<Language, Translations> = {
 
     arrest: {
       title: 'Voice of Arrest',
+      testHypothesis: 'Test Hypothesis',
       voiceOfArrest: 'Give Voice of Arrest',
       attemptsRemaining: 'Attempts remaining: {count}',
       noMysteryYet: 'Start the case to make an arrest.',
       accusation: 'Your Accusation',
+      hypothesisHint: 'Test your theory without using arrest attempts.',
+      selectHint: 'Pick from discovered entities or type your own.',
+      commonMotives: 'Inheritance, Revenge, Jealousy, Blackmail, Money, Hatred, Love, Protection, Cover-up',
       suspect: 'Suspect',
       suspectPlaceholder: 'e.g. the butler, James Wilson',
       weapon: 'Weapon',
@@ -979,10 +987,14 @@ export const translations: Record<Language, Translations> = {
 
     arrest: {
       title: 'Voz de Prisão',
+      testHypothesis: 'Testar Hipótese',
       voiceOfArrest: 'Dar Voz de Prisão',
       attemptsRemaining: 'Tentativas restantes: {count}',
       noMysteryYet: 'Inicie o caso para dar voz de prisão.',
       accusation: 'Sua Acusação',
+      hypothesisHint: 'Teste sua teoria sem usar tentativas de prisão.',
+      selectHint: 'Escolha entre entidades descobertas ou digite o seu.',
+      commonMotives: 'Herança, Vingança, Ciúmes, Chantagem, Dinheiro, Ódio, Amor, Proteção, Acobertamento',
       suspect: 'Suspeito',
       suspectPlaceholder: 'ex: o mordomo, James Wilson',
       weapon: 'Arma',
@@ -1377,10 +1389,14 @@ export const translations: Record<Language, Translations> = {
 
     arrest: {
       title: 'Voz de Arresto',
+      testHypothesis: 'Probar Hipótesis',
       voiceOfArrest: 'Dar Voz de Arresto',
       attemptsRemaining: 'Intentos restantes: {count}',
       noMysteryYet: 'Inicia el caso para hacer un arresto.',
       accusation: 'Tu Acusación',
+      hypothesisHint: 'Prueba tu teoría sin usar intentos de arresto.',
+      selectHint: 'Elige entre entidades descubiertas o escribe el tuyo.',
+      commonMotives: 'Herencia, Venganza, Celos, Chantaje, Dinero, Odio, Amor, Protección, Encubrimiento',
       suspect: 'Sospechoso',
       suspectPlaceholder: 'ej: el mayordomo, James Wilson',
       weapon: 'Arma',

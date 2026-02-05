@@ -36,7 +36,7 @@ Your task is to create a murder mystery case. The case must have:
 Style: ${campaign.tone}
 Setting/Theme: ${campaign.theme}
 
-Create an engaging opening that sets the scene: the crime has been discovered, the detective (the player) arrives. One central challenge with doubts around it—no subplots. Introduce the setting, the victim, and the key suspects. Drop subtle clues but do NOT reveal the solution. Use objective language, avoid circumlocution. The narrative should be 2–3 paragraphs.
+Create an engaging opening that sets the scene: the crime has been discovered, the detective (the player) arrives. One central challenge with doubts around it—no subplots. Introduce the setting, the victim, and the key suspects. Drop subtle clues but do NOT reveal the solution. Use objective language, avoid circumlocution. BREVITY: 1–2 short paragraphs max (4–6 sentences total). No long descriptions.
 
 Return ONLY valid JSON (no markdown, no code blocks) with this exact structure:
 {
